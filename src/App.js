@@ -1,10 +1,22 @@
-import React from 'react';
-import Counter from './components/Counter/Counter';
-import './styles/main.scss';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+import * as actionCreators from './actions/actionCreator';
+import Main from './Main';
 
-export default () => (
-  <div className="container">
-    <h1 className="title"> Basic Counter Example</h1>
-    <Counter />
-  </div>
-);
+function mapStateToProps(state) {
+  return {
+    color: state.color
+  }
+}
+
+function mapDispachToProps(dispatch) {
+  return bindActionCreators(actionCreators, dispatch);
+}
+
+const App = connect(mapStateToProps, mapDispachToProps)(Main);
+// mapStateToProps - наш стейт (posts, comments)
+// mapDispachToProps - наш actions из actionCreator.js
+// connect - совместит наш стейт и action и все это пробросит как props'ы компоненту Main
+// Весь стейт и методы буду доступны как props
+
+export default App;

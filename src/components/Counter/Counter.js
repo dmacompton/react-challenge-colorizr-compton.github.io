@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import Button from '../Button/Button';
 import './counter.scss';
 
@@ -18,20 +18,20 @@ export default class Counter extends Component {
   }
 
   increment() {
-    this.setState({ count: this.state.count + this.state.step });
+    this.setState({count: this.state.count + this.state.step});
   }
 
   decrement() {
-    this.setState({ count: this.state.count - this.state.step });
+    this.setState({count: this.state.count - this.state.step});
   }
 
   increaseStep() {
-    this.setState({ step: this.state.step + 1 });
+    this.setState({step: this.state.step + 1});
   }
 
   decreaseStep() {
     if (this.state.step - 1 !== 0) {
-      this.setState({ step: this.state.step - 1 });
+      this.setState({step: this.state.step - 1});
     }
   }
 

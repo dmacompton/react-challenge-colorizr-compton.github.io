@@ -1,7 +1,7 @@
 import React from 'react';
 import './button.scss';
 
-const Button = ({ type, onClick, children }) => (
+const Button = ({type, onClick, children}) => (
   <button
     className={`btn btn__${type}`}
     onClick={typeof onClick === 'function' ? onClick : false}
