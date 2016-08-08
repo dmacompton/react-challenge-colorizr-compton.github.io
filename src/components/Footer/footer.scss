@@ -1,0 +1,18 @@
+.footer {
+    background-color: #222;
+    color: #d5d5d5;
+    padding-top: 5rem;
+    padding-bottom: 3rem;
+    text-align: center;
+	&__logo {
+	    display: block;
+	    height: 100px;
+	    width: 100%;
+	    padding: 1rem 5rem;
+	}
+	&__credits {
+		a {
+			color: #fff;
+		}
+	}
+}

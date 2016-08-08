@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {Link} from "react-router";
+import './header.scss';
 
 export default class Header extends Component {
   constructor(props) {
@@ -26,6 +27,7 @@ export default class Header extends Component {
               <Link className="navbar__link" activeClassName="navbar__link--active" to='/export'>Export</Link>
             </nav>
           </div>
+          <div className="clearfix"></div>
         </div>
       </header>
     )

@@ -7,12 +7,8 @@ export default class Explore extends Component {
 
   render() {
     return (
-      <div className='container'>
-        <div className='row'>
-          <div className='col-md-12'>
-            <p className="text-center">Explore</p>
-          </div>
-        </div>
+      <div>
+          <p>Explore</p>
       </div>
     )
   }

@@ -1,32 +1,17 @@
 import React, {Component} from 'react';
-import ColorPicker from 'react-color-picker';
+import ColorPicker,{ HueSpectrum } from 'react-color-picker';
+import './export.scss';
 
 export default class Export extends Component {
   constructor(props) {
     super(props);
-    
-    this.state = {
-      displayName: 'App',
-      COLOR: '#fff'
-    };
   }
 
-
-  onDrag(color, c){
-    // устовить цвет
-
-    this.props.setColor(color);
-  }
-  
   render() {
+    console.log('export', this )
     return (
-      <div className="container" style={{backgroundColor: this.props.color.mainColor}}>
-        <div className='row'>
-          <div className='col-md-12'>
-            <p className="text-center">Export</p>
-            <ColorPicker value={this.props.color.mainColor} onDrag={this.onDrag.bind(this)} />
-          </div>
-        </div>
+      <div>
+          <p>Export</p>
       </div>
     )
   }

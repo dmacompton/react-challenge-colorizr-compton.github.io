@@ -1,6 +1,5 @@
 import React, {Component} from "react";
 import {Link} from "react-router";
-import Counter from "./components/Counter/Counter";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import "./styles/main.scss";
@@ -20,7 +19,6 @@ export default class Main extends Component {
       <div className="colorizr-app">
         <Header/>
           {React.cloneElement(this.props.children, this.props)}
-          <Counter />
         <Footer/>
       </div>
     )
